@@ -63,12 +63,12 @@ Edit `.env` with your actual credentials:
 python run.py
 ```
 
-The server will start on `http://localhost:5000`
+The server will start on `http://localhost:5001`
 
 ### 6. Test the health endpoint
 
 ```bash
-curl http://localhost:5000/health
+curl http://localhost:5001/health
 ```
 
 Expected response:

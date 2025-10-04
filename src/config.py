@@ -16,7 +16,7 @@ class Config:
     DEBUG = os.getenv('FLASK_ENV') != 'production'
 
     # Server
-    PORT = int(os.getenv('PORT', 5000))
+    PORT = int(os.getenv('PORT', 5001))  # Default 5001 to avoid macOS AirPlay Receiver conflict
     HOST = '0.0.0.0'
 
     # Database
@@ -31,7 +31,7 @@ class Config:
     ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY', '')
 
     # Application
-    APP_URL = os.getenv('APP_URL', 'http://localhost:5000')
+    APP_URL = os.getenv('APP_URL', 'http://localhost:5001')
 
     @staticmethod
     def validate():
