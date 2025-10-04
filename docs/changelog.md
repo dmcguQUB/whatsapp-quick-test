@@ -4,6 +4,49 @@ All notable changes to the WhatsApp Fitness Bot project will be documented in th
 
 ## [Unreleased]
 
+### 2025-10-04 - Support for .env.local Configuration ✅
+
+**Enhanced environment variable loading to support .env.local**
+
+#### Changed
+- **Updated `src/config.py`** to load both `.env.local` and `.env` files
+  - `.env.local` takes precedence (useful for local development)
+  - `.env` remains as the default (already in `.gitignore`)
+- Allows developers to use `.env.local` without renaming
+
+#### Benefits
+- ✅ Supports standard `.env.local` pattern used in many frameworks
+- ✅ No need to rename environment files
+- ✅ `.env.local` already ignored by Git
+- ✅ Backward compatible with existing `.env` setup
+
+---
+
+### 2025-10-04 - Environment Setup Documentation ✅
+
+**Added comprehensive environment setup guide**
+
+#### Added
+- **Created `docs/environment_setup.md`** with detailed step-by-step instructions for:
+  - Flask Secret Key generation (Python secrets module)
+  - PostgreSQL local database setup (macOS, Windows, Linux)
+  - Twilio WhatsApp API configuration (Account SID, Auth Token, Sandbox setup)
+  - Anthropic Claude API key acquisition and billing setup
+  - Application URL configuration (local and production)
+  - Railway production deployment setup
+- **Updated `README.md`** to reference the new Environment Setup Guide
+- Added security checklist and cost estimates for MVP
+- Included troubleshooting section for common issues
+
+#### Benefits
+- ✅ Clear, actionable instructions for all environment variables
+- ✅ Reduces setup time for new developers
+- ✅ Links to official 2025 documentation
+- ✅ Covers both local development and production deployment
+- ✅ Security best practices included
+
+---
+
 ### 2025-10-04 - Port Configuration Fix ✅
 
 **Fixed default port to avoid macOS conflicts**

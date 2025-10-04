@@ -5,6 +5,8 @@ import os
 from dotenv import load_dotenv
 
 # Load environment variables
+# Loads .env.local first (if exists), then .env
+load_dotenv('.env.local')
 load_dotenv()
 
 

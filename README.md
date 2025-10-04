@@ -46,10 +46,15 @@ pip install -r requirements.txt
 
 ```bash
 cp .env.example .env
+# OR use .env.local (both are supported)
+cp .env.example .env.local
 ```
 
-Edit `.env` with your actual credentials:
+Edit `.env` (or `.env.local`) with your actual credentials.
 
+📚 **For detailed step-by-step instructions on obtaining each credential, see [Environment Setup Guide](docs/environment_setup.md)**
+
+Quick reference:
 - **FLASK_SECRET_KEY**: Generate a secure random key
 - **DATABASE_URL**: Your PostgreSQL connection string
 - **TWILIO_ACCOUNT_SID**: From Twilio Console
@@ -141,6 +146,7 @@ This application is designed to deploy on Railway:
 
 - [Product Requirements Document](docs/prd.md)
 - [Implementation Plan](docs/implementation_plan.md)
+- [Environment Setup Guide](docs/environment_setup.md) - **Step-by-step instructions for all credentials**
 - [Changelog](docs/changelog.md)
 
 ## Tech Stack Details
