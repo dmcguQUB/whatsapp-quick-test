@@ -2,12 +2,16 @@
 Configuration management for WhatsApp Fitness Bot
 """
 import os
-from dotenv import load_dotenv
 
-# Load environment variables
-# Loads .env.local first (if exists), then .env
-load_dotenv('.env.local')
-load_dotenv()
+# Load environment variables from .env files (only in development)
+# In production (Railway), env vars are injected directly
+try:
+    from dotenv import load_dotenv
+    load_dotenv('.env.local')
+    load_dotenv()
+except ImportError:
+    # python-dotenv not installed (shouldn't happen, but safe fallback)
+    pass
 
 
 class Config:
