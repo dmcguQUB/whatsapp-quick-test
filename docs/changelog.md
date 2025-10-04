@@ -4,6 +4,24 @@ All notable changes to the WhatsApp Fitness Bot project will be documented in th
 
 ## [Unreleased]
 
+### 2025-10-04 - Port Configuration Fix ✅
+
+**Fixed default port to avoid macOS conflicts**
+
+#### Changed
+- **Updated default PORT** from 5000 to 5001 in `src/config.py`
+  - Avoids conflict with macOS AirPlay Receiver (uses port 5000)
+  - Added explanatory comment in code
+- **Updated `.env.example`** to reflect PORT=5001 and APP_URL with 5001
+- **Updated `README.md`** with correct port references (5001)
+
+#### Benefits
+- ✅ No more "Address already in use" errors on macOS
+- ✅ App runs without PORT environment variable override
+- ✅ Cleaner developer experience
+
+---
+
 ### 2025-10-04 - Project Structure Refactoring ✅
 
 **Refactored project structure for better maintainability**
