@@ -60,7 +60,7 @@ Edit `.env` with your actual credentials:
 ### 5. Run the application
 
 ```bash
-python app.py
+python run.py
 ```
 
 The server will start on `http://localhost:5000`
@@ -83,15 +83,34 @@ Expected response:
 
 ```
 bmad-whatsapp/
-├── app.py                  # Main Flask application
-├── requirements.txt        # Python dependencies
-├── runtime.txt            # Python version specification
-├── .env.example           # Environment variables template
-├── .gitignore             # Git ignore rules
-├── README.md              # This file
-└── docs/                  # Documentation
-    ├── prd.md             # Product Requirements Document
-    └── implementation_plan.md  # Development roadmap
+├── src/                        # Main application code
+│   ├── __init__.py
+│   ├── app.py                 # Flask app factory
+│   ├── config.py              # Configuration management
+│   ├── models/                # Database models (future)
+│   │   └── __init__.py
+│   ├── services/              # Business logic services (future)
+│   │   └── __init__.py        # - twilio_service.py
+│   │                          # - claude_service.py
+│   │                          # - scheduler_service.py
+│   ├── handlers/              # Message handlers (future)
+│   │   └── __init__.py        # - onboarding.py
+│   │                          # - checkin.py
+│   └── utils/                 # Utility functions (future)
+│       └── __init__.py        # - parsers.py
+│                              # - message_formatter.py
+├── tests/                     # Test files
+│   └── __init__.py
+├── docs/                      # Documentation
+│   ├── prd.md                # Product Requirements Document
+│   ├── implementation_plan.md # Development roadmap
+│   └── changelog.md          # Change history
+├── run.py                     # Application entry point
+├── requirements.txt           # Python dependencies
+├── runtime.txt               # Python version specification
+├── .env.example              # Environment variables template
+├── .gitignore                # Git ignore rules
+└── README.md                 # This file
 ```
 
 ## API Endpoints
