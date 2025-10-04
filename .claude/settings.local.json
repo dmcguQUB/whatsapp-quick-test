@@ -20,7 +20,8 @@
       "WebSearch",
       "WebFetch(domain:www.twilio.com)",
       "WebFetch(domain:console.anthropic.com)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Bash(sed:*)"
     ],
     "deny": [],
     "ask": []
