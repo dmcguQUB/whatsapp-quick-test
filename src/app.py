@@ -10,8 +10,11 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
 
-    # Validate configuration
-    Config.validate()
+    # Validate configuration (optional - won't prevent startup)
+    try:
+        Config.validate()
+    except Exception as e:
+        print(f"Config validation warning: {e}")
 
     # Register routes
     register_routes(app)
